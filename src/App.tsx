@@ -6,16 +6,20 @@ import { Records } from './components/type';
 
 function App() {
   const [records, setRecords] = useState<Records>([]);
+  const [loading, setLoading] = useState(true);
   
-
   const fetchData =async () => {
     const response = await axios.get('https://jsonplaceholder.typicode.com/users');
     setRecords(response?.data);
+    setLoading(false);
   }
 
   useEffect(() => {
     fetchData();
   }, [])
+  
+  if(loading)
+    return <p>Loading..........</p>
   
   return (
     <>
