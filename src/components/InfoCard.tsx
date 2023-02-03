@@ -9,7 +9,7 @@ type InfoCardProps = {
 const InfoCard = (props: InfoCardProps) => {
 
   const {record} = props;
-  const {name, address, company, email} = record;
+  const {name, address, company} = record;
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const toggleDetails = () => {

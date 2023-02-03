@@ -1,7 +1,7 @@
 import './App.css';
 import {useEffect, useState} from "react";
 import axios from "axios";
-import InfoCards from './components/InfoCards';
+import InfoCard from './components/InfoCard';
 import { Records } from './components/type';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
     <>
       {
         records.map((record, index) => {
-          return <InfoCards 
+          return <InfoCard 
             key={index}
             record={record} />
         })
