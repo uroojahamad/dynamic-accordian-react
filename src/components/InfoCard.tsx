@@ -35,7 +35,7 @@ const InfoCard = (props: InfoCardProps) => {
       </div>
       <div className="flex-1 flex justify-center items-center m-4">
         <button className="text-slate-200 rounded-3xl flex-1 bg-red-500 p-3 m-4 shadow-md shadow-red-500 hover:shadow-lg hover:shadow-red-500 hover:bg-red-600" onClick={toggleDetails}>
-          View Details
+         {isVisible ? 'Hide Details' : 'View Details'}
         </button>
       </div>
       {isVisible && <InfoBoxExpanded details={props.record}/>}
